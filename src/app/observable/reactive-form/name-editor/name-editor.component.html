@@ -1,0 +1,5 @@
+<input type="text" [formControl]="name" class="form-control" placeholder="Enter your name" >
+
+<p class="mt-4">Value: {{name.value}}</p>
+
+<button (click)="updateName()" class="btn btn-primary">Update Name</button>

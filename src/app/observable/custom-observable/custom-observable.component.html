@@ -1,0 +1,44 @@
+<h2>Custom Observable</h2>
+
+<div class="row">
+    <div class="col-6">
+        <strong>Ex-01 (Manual)</strong>
+        <hr>
+
+        <ul class="techList" id="eleContainer"
+         [ngClass]="techStatus == 'completed'? 'completed': techStatus == 'error'? 'error' : ''">
+            <!-- <li>Angular</li>
+            <li>React JS</li>
+            <li>Java</li>
+            <li>HTML</li>
+            <li>CSS</li> -->
+        </ul>
+    </div>
+
+    <div class="col-6">
+        <strong>Ex-02 (Custom Interval Observable)</strong>
+        <hr>
+
+        <ul class="techList" id="eleContainer2"
+        [ngClass]="techStatus2 == 'completed'? 'completed': techStatus2 == 'error'? 'error' : ''">
+         
+        </ul>
+    </div>
+</div>
+
+<div class="ro">
+    <div class="col-12">
+        <strong>Ex-03 (Random Names)</strong>
+        <hr>
+        <p class="bg-light p-3 border rounded">
+            <strong>Random Name: ('Tusar', 'Kanta', 'Mallick', UI Developer)</strong>
+        </p>
+        <hr>
+
+        <p>Current Name: <strong class="text-success"> {{names}}</strong></p>
+        <span class="badge"
+        [ngClass]="nameStatus == 'completed'? 'bg-success': nameStatus == 'error'? 'bg-danger': 'bg-primary'"> {{ nameStatus == 'completed'? 'Success': nameStatus == 'error'? 'Error': 'Running' }}</span>
+
+        <!-- <span class="badge bg-primary">Primary</span> -->
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<h2>Retry, RetryWhen, Scan, and Delay  </h2>
+<hr>
+
+
+  
+<div class="row mb-3">
+    <div class="col-12">
+        <table class="table table-border">
+            <tr>
+                <th>User Id</th>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Completed</th>
+            </tr>
+            <tr *ngFor="let dataList of data">
+                <td>{{dataList.userId}}</td>
+                <td>{{dataList.id}}</td>
+                <td>{{dataList.title}}</td>
+                <td>{{dataList.completed}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<button class="btn btn-primary" type="button" (click)="fetchDetails()">
+    <span *ngIf="fetching" class="spinner-border spinner-border-sm"
+     role="status" aria-hidden="true"></span>
+    {{fetching ? 'Fetching...' : 'Fetching Details'}}
+  </button>
+
+  <p class="mt-3"> Status: <strong [ngClass]="{'text-success': status == 'Data fetched', 
+    'text-danger': status == 'Problem fetching data'}" 
+    > {{status}} </strong>
+    <span *ngIf="fetching" class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </span>
+</p>
